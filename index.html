@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<title>Wordle Clone</title>
+	</head>
+	<body>
+		<div class="modal">
+			<div class="modal-content">
+				<span class="close-button"
+					><svg
+						xmlns="http://www.w3.org/2000/svg"
+						width="16"
+						height="16"
+						fill="currentColor"
+						class="bi bi-x-lg"
+						viewBox="0 0 16 16"
+					>
+						<path
+							fill-rule="evenodd"
+							d="M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z"
+						/>
+						<path
+							fill-rule="evenodd"
+							d="M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z"
+						/></svg></span>
+
+				<div class="modal-text">
+					<h1 id="modal-h1">Welcome to the Wordle game.</h1>
+					<h4>This is a simple word guessing game.</h4>
+					<li>
+						1. You have a total of 6 chances to guess the correct 5
+						letter word.
+					</li>
+					<li>
+						2. For a wrong word guess, the correct letter with
+						incorrect position will be shown in yellow.
+					</li>
+					<li>
+						3. For a wrong word guess, the correct letter with
+						correct position will be shown in green.
+					</li>
+				</div>
+			</div>
+		</div>
+		<h1 id="main-heading">WORDLE</h1>
+		<div id="word-grid"></div>
+		<div id="keyboard">
+			<div class="keyboard-row">
+				<input id="Q" type="button" value="Q" />
+				<input id="W" type="button" value="W" />
+				<input id="E" type="button" value="E" />
+				<input id="R" type="button" value="R" />
+				<input id="T" type="button" value="T" />
+				<input id="Y" type="button" value="Y" />
+				<input id="U" type="button" value="U" />
+				<input id="I" type="button" value="I" />
+				<input id="O" type="button" value="O" />
+				<input id="P" type="button" value="P" />
+			</div>
+			<div class="keyboard-row">
+				
+				<input id="A" type="button" value="A" />
+				<input id="S" type="button" value="S" />
+				<input id="D" type="button" value="D" />
+				<input id="F" type="button" value="F" />
+				<input id="G" type="button" value="G" />
+				<input id="H" type="button" value="H" />
+				<input id="J" type="button" value="J" />
+				<input id="K" type="button" value="K" />
+				<input id="L" type="button" value="L" />
+			</div>
+			<div class="keyboard-row">
+					<input style="width: 4rem" type="button" value="Enter" />
+					<input id="Z" type="button" value="Z" />
+					<input id="X" type="button" value="X" />
+					<input id="C" type="button" value="C" />
+					<input id="V" type="button" value="V" />
+					<input id="B" type="button" value="B" />
+					<input id="N" type="button" value="N" />
+					<input id="M" type="button" value="M" />
+					<input id="backspace" style="width: 4rem;" type="button" value="ERASE" />
+			</div>
+		
+		<script src="app.js"></script>
+	</body>
+</html>
