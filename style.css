@@ -1,187 +1,175 @@
 @import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@700&family=Rubik:wght@300&display=swap");
 
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-	font-family: "Red Hat Display", sans-serif;
-	font-family: "Rubik", sans-serif;
-	padding: 0.5em;
-	background-color:rgb(102, 99, 143);
-	color: #200909;
-	font-family: sans-serif;
-	text-align: center;
+    font-family: "Red Hat Display", sans-serif;
+    padding: 0.5em;
+    background-color: #f3f4f6;
+    color: #333;
+    text-align: center;
 }
 
 #main-heading {
-	margin: 1rem;
-	font-style: bold;
-	font-family:'Times New Roman', Times, serif;
-	font-size: 50px;
-	
+    margin: 1rem;
+    font-style: bold;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 3rem;
+    color: #333;
 }
 
 .cell {
-	box-shadow: 6px 7px 16px 1px rgba(0, 0, 0, 0.56);
-	-webkit-box-shadow: 6px 7px 16px 1px rgba(0, 0, 0, 0.56);
-	-moz-box-shadow: 6px 7px 16px 1px rgba(0, 0, 0, 0.56);
-	display: inline-block;
-	width: 50px;
-	height: 50px;
-	border: 2px solid rgb(175, 169, 169);
-	margin: 2px;
-	font-size: 1.5rem;
-	padding: 10px;
-	font-weight: bolder;
-	overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border: 2px solid #ddd;
+    margin: 2px;
+    font-size: 1.5rem;
+    padding: 10px;
+    font-weight: bold;
+    background-color: #fff;
+    transition: all 0.3s ease;
 }
 
 .big-cell {
-	transform: scale(1.08);
+    transform: scale(1.05);
 }
 
 #modal-h1 {
-	margin: 1.5rem;
+    margin: 1.5rem;
+    font-size: 2rem;
+    color: #333;
 }
+
 .correct-cell {
-	background-color: rgba(15, 237, 34, 0.596);
-	border: 0px;
-	transition: all linear 800ms;
+    background-color: #66bb6a;
+    border-color: #4caf50;
 }
+
 .correct-letter-wrong-cell {
-	background-color: rgba(219, 219, 76, 0.596);
-	border: 0;
-	transition: all linear 800ms;
+    background-color: #ffeb3b;
+    border-color: #ffc107;
 }
 
 .wrong-cell {
-	background-color: rgb(73, 73, 73);
-	border: 0;
-	transition: all linear 800ms;
+    background-color: #ef5350;
+    border-color: #f44336;
 }
 
 .modal {
-	position: fixed;
-	left: 0;
-	top: 0;
-	width: 100%;
-	height: 100%;
-	background-color: rgba(0, 0, 0, 0.5);
-	opacity: 0;
-	visibility: hidden;
-	transform: scale(1.1);
-	transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1.1);
+    transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
 }
 
 .modal-content {
-	backdrop-filter: blur(4px) saturate(139%);
-	-webkit-backdrop-filter: blur(4px) saturate(139%);
-	background-color: rgba(167, 167, 167, 0.01);
-	border-radius: 12px;
-	border: 1px solid rgba(169, 191, 225, 0.3);
-	color: rgb(255, 255, 255);
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	/* background-color: rgb(97, 97, 97); */
-	padding: 2rem 2rem;
-	width: 30rem;
-	/* border-radius: 0.5rem; */
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    color: #333;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 2rem;
+    width: 30rem;
 }
 
 .modal-text {
-	display: flex;
-	flex-direction: column;
-	padding: 0.5rem;
-	text-align: center;
+    padding: 0.5rem;
+    text-align: center;
 }
 
 li {
-	text-align: left;
-	margin: 1rem 0;
-	font-weight: bold;
-	font-family: sans-serif;
-	list-style: none;
+    margin: 1rem 0;
+    font-weight: bold;
+    list-style: none;
 }
 
 .close-button {
-	position: absolute;
-	right: 10px;
-	top: 10px;
-	float: right;
-	width: 3rem;
-	font-weight: bolder;
-	line-height: 3rem;
-	text-align: center;
-	cursor: pointer;
-	border-radius: 0.25rem;
-	background-color: rgba(97, 97, 97, 0);
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 3rem;
+    height: 3rem;
+    line-height: 3rem;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.1);
 }
 
 .show-modal {
-	opacity: 1;
-	visibility: visible;
-	transform: scale(1);
-	transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+    transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
 }
 
 #keyboard {
-	margin: 0.2rem;
+    margin: 0.2rem;
 }
 
 #keyboard input {
-	box-shadow: 6px 7px 16px 1px rgba(0, 0, 0, 0.56);
-	width: 3.4rem;
-	height: 3.7rem;
-	margin: 0.2rem;
-	border-radius: 5px;
-	border: 1;
-	font-weight: bold;
-	background-color: #1c282e;
-	color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 3.4rem;
+    height: 3.7rem;
+    margin: 0.2rem;
+    border-radius: 5px;
+    font-weight: bold;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-.keyboard-row {
-	text-align: center;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+#keyboard input:hover {
+    background-color: #66bb6a;
 }
 
 .play-buttons {
-	margin-top: 2rem;
-	display: flex;
-	/* flex-direction: column; */
-	justify-content: center;
-	align-items: center;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
 }
 
 .play-buttons button {
-	margin: 1rem;
-	width: 8rem;
-	height: 3rem;
-	border-radius: 4px;
-	border: 1px solid white;
-	font-size: 1.3rem;
-	color: white;
-	font-weight: bold;
-	background-color: rgba(48, 48, 48, 0.089);
+    margin: 1rem;
+    width: 10rem;
+    height: 3rem;
+    border-radius: 4px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease;
 }
 
 .play-buttons button:hover {
-	transform: scale(1.2);
+    transform: scale(1.05);
 }
-	
-@media only screen and (max-width: 480px) {
-	.modal-content {
-		width: 20rem;
-	}
 
-	.play-buttons {
-		flex-direction: column;
-	}
+@media only screen and (max-width: 480px) {
+    .modal-content {
+        width: 20rem;
+    }
+
+    .play-buttons {
+        flex-direction: column;
+    }
 }

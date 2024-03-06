@@ -190,3 +190,32 @@ fetch("./words.json")
 	.catch((err) => {
 		console.log("Error in fetching word");
 	});
+
+	// Add this code at the beginning of your JavaScript file
+
+let timeLeft = 60; // 60 seconds for the game
+const timerDisplay = document.getElementById("time");
+
+function startTimer() {
+    const timerInterval = setInterval(() => {
+        timeLeft--;
+        timerDisplay.textContent = timeLeft;
+        if (timeLeft === 0) {
+            clearInterval(timerInterval);
+            gameOver();
+        }
+    }, 1000);
+}
+
+startTimer();
+
+// Add this code at the beginning of your JavaScript file
+
+let score = 0;
+const scoreDisplay = document.getElementById("score");
+
+function updateScore() {
+    score++;
+    scoreDisplay.textContent = score;
+}
+
