@@ -204,7 +204,7 @@ function startTimer() {
             clearInterval(timerInterval);
             gameOver();
         }
-    }, 1000);
+    }, 2000);
 }
 
 startTimer();
